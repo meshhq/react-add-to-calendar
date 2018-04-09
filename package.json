@@ -14,6 +14,7 @@
     "url": "https://github.com/jasonsalzman/react-add-to-calendar/issues"
   },
   "main": "dist/react-add-to-calendar.min.js",
+  "types": "dist/index.d.ts",
   "style": "dist/react-add-to-calendar.min.css",
   "files": ["*.md", "dist", "lib"],
   "keywords": [

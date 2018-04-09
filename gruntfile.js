@@ -63,17 +63,8 @@ module.exports = function (grunt) {
         files: ['src/**/*.js', 'src/**/*.jsx'],
         tasks: ['webpack']
       }
-    },
-
-    scsslint: {
-      files: ['src/styles/*.scss', 'docs-site/src/*.scss'],
-      options: {
-        config: '.scss-lint.yml',
-        colorizeOutput: true,
-        exclude: ['docs-site/src/higlight.scss', 'docs-site/src/reset.scss']
-      }
-    },
-
+	},
+	
     karma: {
       unit: {
         configFile: 'karma.conf.js',
@@ -132,7 +123,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-karma')
   grunt.loadNpmTasks('grunt-eslint')
 
-  grunt.registerTask('default', ['watch', 'scsslint'])
-  grunt.registerTask('travis', ['eslint', 'karma', 'scsslint'])
-  grunt.registerTask('build', ['scsslint', 'babel', 'webpack', 'sass'])
+  grunt.registerTask('default', ['watch'])
+  grunt.registerTask('travis', ['eslint', 'karma'])
+  grunt.registerTask('build', ['babel', 'webpack', 'sass'])
 }
